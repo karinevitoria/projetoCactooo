@@ -1,0 +1,79 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+
+/* importando a fonte */
+@font-face {
+  font-family: 'Cactus';
+  src: url(../assets/fonts/Cactus\ Regular.otf);
+}
+
+/* configurações iniciais do materialize */
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+/* barra superior */
+#barraSuperior{
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+#barraSuperior button{
+  height: 30px;
+  border-radius: 20%;
+  border-style: solid;
+  border-color: #f9f4eb;
+  margin: 0px 5px;
+  background-color: #5d7014;
+}
+#barraSuperior h1{
+  margin: 0px 20px;
+  font-family: 'Cactus';
+}
+
+/* fundo bege e centralizar o conteudo */
+.container{
+  display: flex;
+  justify-content: center;
+}
+#content{
+  background-color: #f9f4eb;
+  width: fit-content;
+}
+
+/* teclado */
+#teclado{
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#teclado div{
+  display: flex;
+}
+.segundaFileira{
+  margin: 0.5rem 0;
+}
+.btnTeclado{
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin: 0 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 15%;
+  background-color: #5d7014;
+  font-family: 'Cactus';
+}
+.md-12{
+  font-size: 1rem;
+}
