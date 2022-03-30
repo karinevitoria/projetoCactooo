@@ -1,4 +1,5 @@
-const girias = [
+
+export const girias = [
     'altear',
 	'avexar',
 	'folote',	
@@ -55,7 +56,6 @@ const girias = [
 	'seboso',
 	'sibito',
 	'xaxado',
-	'raçudo',
     'avoado',
 	'bicado',
 	'biliro',
