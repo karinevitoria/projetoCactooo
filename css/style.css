@@ -42,10 +42,12 @@
 }
 
 /* fundo bege e centralizar o conteudo */
-body{
-  background-image: url('../assets/images/cordel_web.png');
-  background-size: 100%;
-  background-attachment: scroll;
+html { 
+  background: url('../assets/images/cordel_web.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .container{
   display: flex;
