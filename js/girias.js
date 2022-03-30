@@ -75,5 +75,7 @@ const girias = [
 	'queijo',
 	'sarara',
 	'tabica',
-    'xexero'
+    'xexero',
+    'tabaca',
+    'lombao'
 ]
