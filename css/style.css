@@ -83,12 +83,15 @@ html {
   text-transform: uppercase;
   border: none;
   border-radius: 15%;
-  background-color: #5d7014;
+  background-color: #603601;
   font-family: 'Cactus';
   color: white;
 }
 .md-12{
   font-size: 1rem;
+}
+.btnTeclado img{
+  width: 30px;
 }
 
 /* Tela do jogo */
@@ -103,7 +106,7 @@ html {
 }
 
 .letter-box {
-  border: 2px solid gray;
+  border: 1px solid gray;
   border-radius: 3px;
   margin: 2px;
   font-size: 2.5rem;
@@ -117,7 +120,7 @@ html {
 }
 
 .filled-box {
-  border: 2px solid black;
+  border: 2px solid grey;
 }
 
 .letter-row {

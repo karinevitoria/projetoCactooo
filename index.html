@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-  <title>Cactooo</title>
+  <title>Cacto</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -18,8 +18,7 @@
 <body>
   <div class="container">
     <div id="content">
-      <div id="barraSuperior" class="row center">
-        
+      <div id="barraSuperior" class="row center">      
         
         <button class="modal-trigger" id="ajuda" href="#modal1"><span class="material-icons">help_outline</span></button>
         <div id="modal1" class="modal">
@@ -73,10 +72,8 @@
              </div>
             </div>
            </div>
-
-
-
-        <h1>Cact.ooo</h1>
+        
+        <h1>CACTO</h1>
         <button id="estatisticas"><span class="material-icons">analytics</span></button>
         <!-- Acho massa a gente colocar um botão p a gente colocar as informações, github etc, e não colocar o botão config -->
         <button id="informacoes"><span class="material-icons">info</span></button>
@@ -108,7 +105,7 @@
           <button class="btnTeclado">j</button>
           <button class="btnTeclado">k</button>
           <button class="btnTeclado">l</button>
-          <button class="btnTeclado"><span class="material-icons md-12">backspace</span></button>
+          <button class="btnTeclado" value="backspace">del</button>
         </div>
         <div class="terceiraFileira">
 
@@ -125,9 +122,10 @@
     </div>
   </div>
   <!--  Scripts-->
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="./js/script.js"></script>
+  <script src="./js/script.js" type="module"></script>
   <script src="js/materialize.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
   <script>
@@ -135,7 +133,7 @@
       $('.modal').modal();
       
     });
-  </script>
+  </script> 
 
 </body>
 
