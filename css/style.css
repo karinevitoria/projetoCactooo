@@ -42,13 +42,17 @@
 }
 
 /* fundo bege e centralizar o conteudo */
+body{
+}
 .container{
   display: flex;
   justify-content: center;
+  height: 100vh;
+  width: 100vh;
 }
 #content{
   background-color: #f9f4eb;
-  width: fit-content;
+  width: 100%;
 }
 
 /* teclado */
@@ -57,6 +61,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 #teclado div{
   display: flex;
@@ -65,7 +70,7 @@
   margin: 0.5rem 0;
 }
 .btnTeclado{
-  font-size: 1rem;
+  font-size: 40px;
   padding: 0.5rem;
   margin: 0 2px;
   cursor: pointer;
@@ -82,10 +87,12 @@
 
 /* Tela do jogo */
 
-#game-board {
+#telaJogo {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
 
 .letter-box {
@@ -108,4 +115,5 @@
 
 .letter-row {
   display: flex;
+  justify-content: center;
 }
