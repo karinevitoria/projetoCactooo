@@ -127,3 +127,47 @@ html {
   display: flex;
   justify-content: center;
 }
+
+/* Modal ajuda */
+.modal{
+  padding: 0.3em;
+  background-color: #2a3209ef;
+  box-sizing: border-box;
+  border-radius: 0.5em;
+}
+
+.modal-content{
+  padding: 3px !important;
+  color: white;
+  font-size: 17px;
+  
+}
+
+.modal .modal-footer {
+  border-radius: 0 0 2px 2px;
+  background-color: #ffffff important!;
+  padding: 4px 6px;
+  height: 56px;
+  width: 100%;
+  text-align: right;
+}
+
+.letter{
+  font-family: 'Cactus';
+  font-size: 25px;
+  background-color: #0d1605;
+  align-items: center;
+  padding: 0.3rem;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 15%;
+  
+}
+
+.right {
+    background-color: #a4cd00;
+  padding: 0.3rem;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 15%;
+}
