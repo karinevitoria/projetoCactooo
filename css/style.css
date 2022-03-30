@@ -148,7 +148,7 @@ body{
 
 .modal .modal-footer {
   border-radius: 0 0 2px 2px;
-  background-color: #ffffff important!;
+  background-color: #000000 important!;
   padding: 4px 6px;
   height: 56px;
   width: 100%;
@@ -158,7 +158,7 @@ body{
 .letter{
   font-family: 'Cactus';
   font-size: 25px;
-  background-color: #0d1605;
+  background-color: #ddd5c5;
   align-items: center;
   padding: 0.3rem;
   border: none;
@@ -168,9 +168,26 @@ body{
 }
 
 .right {
-    background-color: #a4cd00;
+  background-color: #5d7015;
   padding: 0.3rem;
   border: none;
   text-transform: uppercase;
   border-radius: 15%;
+}
+
+.place {
+  background-color: #EEBB4D;
+  padding: 0.3rem;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 15%;
+}
+
+.wrong {
+  background-color: #b6a991;
+  padding: 0.3rem;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 15%;
+  
 }
