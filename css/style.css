@@ -49,6 +49,9 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+body{
+  display: flex;
+}
 .container{
   display: flex;
   justify-content: center;
