@@ -18,7 +18,61 @@
 <body>
   <div class="container">
     <div id="content">
-      <div id="barraSuperior" class="row center">
+      <div id="barraSuperior" class="row center">      
+        
+        <button class="modal-trigger" id="ajuda" href="#modal1"><span class="material-icons">help_outline</span></button>
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+
+            <div tabindex="0" id="help"> 
+              <p tabindex="0" class="help_termo"> <span class="letter">Cacto.ooo</span> é um jogo temático com palavras típicas do Nordeste brasileiro. Descubra a palavra certa em 7 tentativas.
+              Depois de cada tentativa, as peças mostram o quão perto você está da solução.
+             
+               </p><div class="example">
+                 <span tabindex="0" role="text" aria-label="letra T correta" class="letter right">T</span>
+                 
+                 <span tabindex="0" role="text" aria-label="letra U" class="letter">U</span>
+                 <span tabindex="0" role="text" aria-label="letra R" class="letter">R</span>
+                 <span tabindex="0" role="text" aria-label="letra M" class="letter">M</span>
+                 <span tabindex="0" role="text" aria-label="letra A" class="letter">A</span>
+                 <span tabindex="0" role="text" aria-label="letra A" class="letter">A</span>
+                 <span tabindex="0" role="text" aria-label="letra A" class="letter">A</span>
+               </div>
+             
+               <p tabindex="0">A letra <span class="letter right">T</span> faz parte da palavra e está na
+               posição correta.</p>
+               
+               <div class="example">
+                 <span tabindex="0" role="text" aria-label="letra V" class="letter">V</span>
+                 <span tabindex="0" role="text" aria-label="letra I" class="letter">I</span>
+                 <span tabindex="0" role="text" aria-label="letra O em outro local" class="letter place">O</span>
+                 <span tabindex="0" role="text" aria-label="letra L" class="letter">L</span>
+                 <span tabindex="0" role="text" aria-label="letra A" class="letter">A</span>
+               </div>
+             
+               <p tabindex="0">A letra <span class="letter place">O</span> faz parte da palavra mas em outra posição.</p>
+             
+               <div class="example">
+                 <span tabindex="0" role="text" aria-label="letra P" class="letter">P</span>
+                 <span tabindex="0" role="text" aria-label="letra U" class="letter">U</span>
+                 <span tabindex="0" role="text" aria-label="letra L" class="letter">L</span>
+                 <span tabindex="0" role="text" aria-label="letra G errada" class="letter wrong">G</span>
+                 <span tabindex="0" role="text" aria-label="letra A" class="letter">A</span>
+               </div>
+             
+               <p tabindex="0">A letra <span class="letter wrong">G</span> não faz parte da palavra.</p>
+             
+               <p tabindex="0">Os acentos são preenchidos automaticamente, e não são considerados nas dicas.</p>
+             
+               <p tabindex="0">As palavras podem possuir letras repetidas.</p>
+             
+               <div class="help_termo">
+                 <br><p tabindex="0">Uma palavra nova aparece a cada dia.</p>
+               </div>
+             </div>
+            </div>
+           </div>
+        
         <h1>CACTO</h1>
         <button id="estatisticas"><span class="material-icons">analytics</span></button>
         <!-- Acho massa a gente colocar um botão p a gente colocar as informações, github etc, e não colocar o botão config -->
@@ -68,10 +122,19 @@
     </div>
   </div>
   <!--  Scripts-->
-  
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="./js/script.js" type="module"></script>
+  <script src="js/materialize.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.modal').modal();
+      
+    });
+  </script> 
+
 </body>
 
 </html>
