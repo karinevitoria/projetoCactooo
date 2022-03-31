@@ -142,7 +142,7 @@ body{
 .modal-content{
   padding: 3px !important;
   color: white;
-  font-size: 17px;
+  font-size: 15px;
   
 }
 
@@ -157,8 +157,9 @@ body{
 
 .letter{
   font-family: 'Cactus';
-  font-size: 25px;
+  font-size: 20px;
   background-color: #ddd5c5;
+  color: #000000;
   align-items: center;
   padding: 0.3rem;
   border: none;
@@ -167,27 +168,23 @@ body{
   
 }
 
-.right {
+.correct {
   background-color: #5d7015;
-  padding: 0.3rem;
-  border: none;
-  text-transform: uppercase;
-  border-radius: 15%;
+  
 }
 
 .place {
   background-color: #EEBB4D;
-  padding: 0.3rem;
-  border: none;
-  text-transform: uppercase;
-  border-radius: 15%;
+  
 }
 
 .wrong {
   background-color: #b6a991;
-  padding: 0.3rem;
-  border: none;
-  text-transform: uppercase;
-  border-radius: 15%;
   
+  
+}
+
+.titulo{
+  font-family: 'Cactus';
+  font-size: 28px;
 }
