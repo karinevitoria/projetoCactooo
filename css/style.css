@@ -49,6 +49,9 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+body{
+  display: flex;
+}
 .container{
   display: flex;
   justify-content: center;
@@ -139,13 +142,13 @@ html {
 .modal-content{
   padding: 3px !important;
   color: white;
-  font-size: 17px;
+  font-size: 15px;
   
 }
 
 .modal .modal-footer {
   border-radius: 0 0 2px 2px;
-  background-color: #ffffff important!;
+  background-color: #000000 important!;
   padding: 4px 6px;
   height: 56px;
   width: 100%;
@@ -154,8 +157,9 @@ html {
 
 .letter{
   font-family: 'Cactus';
-  font-size: 25px;
-  background-color: #0d1605;
+  font-size: 20px;
+  background-color: #ddd5c5;
+  color: #000000;
   align-items: center;
   padding: 0.3rem;
   border: none;
@@ -164,10 +168,23 @@ html {
   
 }
 
-.right {
-    background-color: #a4cd00;
-  padding: 0.3rem;
-  border: none;
-  text-transform: uppercase;
-  border-radius: 15%;
+.correct {
+  background-color: #5d7015;
+  
+}
+
+.place {
+  background-color: #EEBB4D;
+  
+}
+
+.wrong {
+  background-color: #b6a991;
+  
+  
+}
+
+.titulo{
+  font-family: 'Cactus';
+  font-size: 28px;
 }
