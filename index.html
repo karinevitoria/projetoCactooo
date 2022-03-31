@@ -20,6 +20,7 @@
     <div id="content">
       <div id="barraSuperior" class="row center">      
         
+        <!-- BOTÃO MODAL AJUDA -->
         <button class="modal-trigger" id="ajuda" href="#modal1"><span class="material-icons">help_outline</span></button>
         <div id="modal1" class="modal">
           <div class="modal-content">
@@ -65,16 +66,35 @@
                <p tabindex="0">A letra <span class="letter wrong">O</span> não faz parte da palavra.</p>
                                        
                <div class="help_termo">
-                 <p tabindex="0" style="font-weight: bold">Uma palavra nova aparece a cada dia.</p>
+                 <p tabindex="0" style="font-weight: bold">Enquanto o discionário nordestino permitir todo santo dia uma palavra diferente.</p>
                </div>
              </div>
             </div>
            </div>
         
         <h1>CACTOS</h1>
+
+        <!-- BOTÃO MODAL ESTATÍSTICAS -->
         <button id="estatisticas"><span class="material-icons">analytics</span></button>
-        <!-- Acho massa a gente colocar um botão p a gente colocar as informações, github etc, e não colocar o botão config -->
-        <button id="informacoes"><span class="material-icons">info</span></button>
+
+
+        <!-- BOTÃO MODAL INFORMAÇÕES -->
+        <button id="informacoes" class="modal-trigger" href="#modalInfo1"><span class="material-icons">info</span></button>
+        <div id="modalInfo1" class="modal">
+          <div class="modal-content">
+
+            <div tabindex="0" id="help"> 
+              <p tabindex="0" class="help_cactos"> <span class="titulo">Sobre o Projeto:</span> <br> Cactos é um jogo temático inspirado na verção original Wordle e a então versão brasileira Termo.<br>
+                Projeto realizado no curso de Desenvolvimento Frontend do SENAC.<br>
+                Colaboradores <br>
+                Professor<br>
+                Link repositório<br>
+              </p>
+             
+             </div>
+            </div>
+           </div>  
+
 
       </div>
 
@@ -129,7 +149,7 @@
   <script>
     $(document).ready(function(){
       $('.modal').modal();
-      
+      $('.modalInfo').modal();
     });
   </script> 
 
