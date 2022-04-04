@@ -44,7 +44,7 @@ document.addEventListener("keyup", (e) => {
         return
     }
 
-    let found = pressedKey.match(/[a-z]/gi)
+    let found = pressedKey.match(/[a-z]/g)
     if (!found || found.length > 1) {
         return
     } else {
@@ -176,3 +176,5 @@ document.getElementById("teclado").addEventListener("click", (e) => {
 
     document.dispatchEvent(new KeyboardEvent("keyup", {'key': key}))
 })
+
+   

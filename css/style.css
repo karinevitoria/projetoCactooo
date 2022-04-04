@@ -62,19 +62,24 @@ body{
   background-color: #b6a9916b;
   width: 100%;
   height: 100%;
+  position: absolute;
 }
 
 /* teclado */
-#teclado{
-  margin: 1rem 0;
+ #teclado{
+  margin: 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  bottom: 0;
+  position: absolute;
+  width: 100%; 
+ 
 }
 #teclado div{
   display: flex;
   padding: 0 0.5em 0.3em 0.5em;
+  
 }
 .segundaFileira{
   margin: 0.5rem 0;
@@ -91,6 +96,12 @@ body{
   font-family: 'Cactus';
   color: white;
 }
+
+.btnTeclado:hover, .btnTeclado:focus{
+  background-color: #5d7014;
+  
+}  
+
 .md-12{
   font-size: 1rem;
 }
@@ -190,4 +201,6 @@ body{
 .titulo{
   font-family: 'Cactus';
   font-size: 28px;
+  
 }
+

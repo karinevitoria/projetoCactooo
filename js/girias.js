@@ -79,5 +79,8 @@ export const girias = [
     'tabaca',
     'lombao',
     'butico',
-    'arrear'
+    'arrear',
+	'prenha',
+	'arruma',
+	'cuscuz'
 ]
