@@ -34,7 +34,7 @@ document.addEventListener("keyup", (e) => {
     }
 
     let pressedKey = String(e.key)
-    if (pressedKey === "Backspace" && nextLetter !== 0) {
+    if (pressedKey === "Backspace" && nextLetter > 0) {
         deleteLetter()
         return
     }
@@ -169,10 +169,11 @@ document.getElementById("teclado").addEventListener("click", (e) => {
         return
     }
     let key = target.textContent
-
+    
     if (key === "del") {
         key = "Backspace"
-    } 
+    }    
 
     document.dispatchEvent(new KeyboardEvent("keyup", {'key': key}))
+    
 })
