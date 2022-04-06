@@ -74,6 +74,7 @@ body{
 }
 #teclado div{
   display: flex;
+  padding: 0 0.5em 0.3em 0.5em;
 }
 .segundaFileira{
   margin: 0.5rem 0;
@@ -137,6 +138,8 @@ body{
   background-color: #2a3209ef;
   box-sizing: border-box;
   border-radius: 0.5em;
+  min-width: 300px;
+  min-height: 550px;
 }
 
 .modal-content{
