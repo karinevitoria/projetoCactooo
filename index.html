@@ -32,7 +32,7 @@
                 Depois de cada tentativa, as peças mudarão de cor para mostrar quão perto você está da solução. <br> Só
                 não vale ficar arretado se errar, visse?
 
-              </p>
+              </p> </div>
               <div class="example">
                 <span tabindex="0" role="text" aria-label="letra T correta" class="letter correct">A</span>
 
@@ -73,7 +73,8 @@
               <div class="help_termo">
                 <p tabindex="0" style="font-weight: bold">Uma palavra nova aparece a cada dia.</p>
               </div>   
-        
+              </div>
+            </div>        
         <!-- BOTÃO MODAL AJUDA -->
         <button class="modal-trigger" id="ajuda" href="#modal1"><span class="material-icons">help_outline</span></button>
         <div id="modal1" class="modal">
@@ -121,18 +122,19 @@
                                        
                <div class="help_termo">
                  <p tabindex="0" style="font-weight: bold">Enquanto o discionário nordestino permitir todo santo dia uma palavra diferente.</p>
-               </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
         <h1>CACTOS</h1>
-
+        
+        <!-- BOTÃO MODAL ESTATÍSTICAS -->
         <button id="estatisticas" class="modal-trigger" href="#modalestatistica1"><span
-            class="material-icons">analytics</span></button>
-        <div id="modalestatistica1" class="modal">
-          <div class="modal-content">
-
+          class="material-icons">analytics</span></button>
+          <div id="modalestatistica1" class="modal">
+            <div class="modal-content">
+              
             <div tabindex="0" id="help">
               <p tabindex="0" class="help_cactos"> <span class="titulo"></span></p>
               <div id="box">
@@ -188,14 +190,7 @@
             </div>
           </div>
         </div>
-        <!-- Acho massa a gente colocar um botão p a gente colocar as informações, github etc, e não colocar o botão config -->
-        <button id="informacoes"><span class="material-icons">info</span></button>
-
-
-        <!-- BOTÃO MODAL ESTATÍSTICAS -->
-        <button id="estatisticas"><span class="material-icons">analytics</span></button>
-
-
+        
         <!-- BOTÃO MODAL INFORMAÇÕES -->
         <button id="informacoes" class="modal-trigger" href="#modalInfo1"><span class="material-icons">info</span></button>
         <div id="modalInfo1" class="modal">
@@ -212,10 +207,9 @@
              </div>
             </div>
            </div>  
+        </div>
 
 
-
-      </div>
 
       <div id="telaJogo"></div>
 
@@ -258,6 +252,8 @@
       </div>
     </div>
   </div>
+  </body>
+
   <!--  Scripts-->
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
