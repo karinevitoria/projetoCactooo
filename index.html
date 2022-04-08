@@ -18,7 +18,61 @@
 <body>
   <div class="container">
     <div id="content">
-      <div id="barraSuperior" class="row center">      
+
+      <div id="barraSuperior" class="row center">
+
+        <button class="modal-trigger" id="ajuda" href="#modal1"><span
+            class="material-icons">help_outline</span></button>
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+
+            <div tabindex="0" id="help">
+              <p tabindex="0" class="help_termo"> <span class="titulo">Como Jogar:</span> <br> Cactos é um jogo temático
+                com palavras típicas do Nordeste brasileiro. Descubra a palavra certa em 7 tentativas.
+                Depois de cada tentativa, as peças mudarão de cor para mostrar quão perto você está da solução. <br> Só
+                não vale ficar arretado se errar, visse?
+
+              </p>
+              <div class="example">
+                <span tabindex="0" role="text" aria-label="letra T correta" class="letter correct">A</span>
+
+                <span tabindex="0" role="text" aria-label="letra U" class="letter">V</span>
+                <span tabindex="0" role="text" aria-label="letra R" class="letter">U</span>
+                <span tabindex="0" role="text" aria-label="letra M" class="letter">A</span>
+                <span tabindex="0" role="text" aria-label="letra A" class="letter">D</span>
+                <span tabindex="0" role="text" aria-label="letra A" class="letter">O</span>
+
+              </div>
+
+              <p tabindex="0">A letra <span class="letter correct">A</span> faz parte da palavra e está na
+                posição correta.</p>
+
+              <div class="example">
+                <span tabindex="0" role="text" aria-label="letra V" class="letter">C</span>
+                <span tabindex="0" role="text" aria-label="letra I" class="letter">H</span>
+                <span tabindex="0" role="text" aria-label="letra O em outro local" class="letter place">E</span>
+                <span tabindex="0" role="text" aria-label="letra L" class="letter">I</span>
+                <span tabindex="0" role="text" aria-label="letra A" class="letter">R</span>
+                <span tabindex="0" role="text" aria-label="letra A" class="letter">O</span>
+              </div>
+
+              <p tabindex="0">A letra <span class="letter place">E</span> faz parte da palavra, mas em outra posição.
+              </p>
+
+              <div class="example">
+                <span tabindex="0" role="text" aria-label="letra P" class="letter">C</span>
+                <span tabindex="0" role="text" aria-label="letra U" class="letter">O</span>
+                <span tabindex="0" role="text" aria-label="letra L" class="letter">T</span>
+                <span tabindex="0" role="text" aria-label="letra G errada" class="letter wrong">O</span>
+                <span tabindex="0" role="text" aria-label="letra A" class="letter">C</span>
+                <span tabindex="0" role="text" aria-label="letra A" class="letter">O</span>
+              </div>
+
+              <p tabindex="0">A letra <span class="letter wrong">O</span> não faz parte da palavra.</p>
+
+              <div class="help_termo">
+                <p tabindex="0" style="font-weight: bold">Uma palavra nova aparece a cada dia.</p>
+              </div>   
         
         <!-- BOTÃO MODAL AJUDA -->
         <button class="modal-trigger" id="ajuda" href="#modal1"><span class="material-icons">help_outline</span></button>
@@ -68,11 +122,75 @@
                <div class="help_termo">
                  <p tabindex="0" style="font-weight: bold">Enquanto o discionário nordestino permitir todo santo dia uma palavra diferente.</p>
                </div>
-             </div>
             </div>
-           </div>
-        
+          </div>
+        </div>
+
         <h1>CACTOS</h1>
+
+        <button id="estatisticas" class="modal-trigger" href="#modalestatistica1"><span
+            class="material-icons">analytics</span></button>
+        <div id="modalestatistica1" class="modal">
+          <div class="modal-content">
+
+            <div tabindex="0" id="help">
+              <p tabindex="0" class="help_cactos"> <span class="titulo"></span></p>
+              <div id="box">
+                <div id="stats">
+                  <h2 class="titulo">progresso</h2>
+                  <div id="statstable">
+                    <div class="statistic-container">
+                      <b class="statistic">0</b>
+                      <p class="label">jogos</p>
+                    </div>
+                    <div class="statistic-container">
+                      <b class="statistic">0%</b>
+                      <p class="label">de vitórias</p>
+                    </div>
+                    <div class="statistic-container">
+                      <b class="statistic">0</b>
+                      <p class="label">sequência de vitórias</p>
+                    </div>
+                    <div class="statistic-container">
+                      <b class="statistic">0</b>
+                      <p class="label">melhor sequência</p>
+                    </div>
+                  </div>
+                  <h2>distribuição de tentativas</h2>
+                  <div id="histo">
+                    <b>1</b>
+                    <span>
+                      <div class="stats_histo" style="width: 0%">0</div>
+                    </span>
+                    <b>2</b>
+                    <span>
+                      <div class="stats_histo" style="width: 0%">0</div>
+                    </span>
+                    <b>3</b>
+                    <span>
+                      <div class="stats_histo" style="width: 0%">0</div>
+                    </span>
+                    <b>4</b>
+                    <span>
+                      <div class="stats_histo" style="width: 0%">0</div>
+                    </span>
+                    <b>5</b>
+                    <span>
+                      <div class="stats_histo" style="width: 0%">0</div>
+                    </span>
+                    <b>6</b>
+                    <span>
+                      <div class="stats_histo" style="width: 0%">0</div>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Acho massa a gente colocar um botão p a gente colocar as informações, github etc, e não colocar o botão config -->
+        <button id="informacoes"><span class="material-icons">info</span></button>
+
 
         <!-- BOTÃO MODAL ESTATÍSTICAS -->
         <button id="estatisticas"><span class="material-icons">analytics</span></button>
@@ -94,6 +212,7 @@
              </div>
             </div>
            </div>  
+
 
 
       </div>
@@ -147,11 +266,12 @@
   <script src="js/materialize.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
   <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
       $('.modal').modal();
+      $('.modalestatistica').modal();
       $('.modalInfo').modal();
     });
-  </script> 
+  </script>
 
 </body>
 
