@@ -1,7 +1,7 @@
 # projetoCactooo
 <br>
 <h1 align="center">
-![cacto_gifs](https://user-images.githubusercontent.com/83614778/162597397-8e8f5086-9a06-4eaa-bd87-83bd702a18e6.gif)
+![cactos2_gifs](https://user-images.githubusercontent.com/83614778/162836070-4839cc41-baee-44a6-84a0-9908e50ef8fb.gif)
 </h1>
 <br>
 <h1 align="center">🌵 Cactos 🌵</h1>
