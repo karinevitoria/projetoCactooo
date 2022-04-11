@@ -116,7 +116,7 @@ body{
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 0;
+  padding-top: 30px;
   padding-bottom: 0;
   ;
 }
@@ -281,4 +281,16 @@ body{
 #statstable b,p {
   font-family: 'Cactus';
   font-size: 25px;
+}
+
+#result{
+  font-family: 'Cactus';
+  font-size: 27px;
+  src: url(../assets/fonts/Cactus\ Regular.otf);
+  padding-top: 0px;
+  padding-bottom: 10px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
