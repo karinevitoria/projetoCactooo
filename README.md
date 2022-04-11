@@ -1,8 +1,8 @@
 # projetoCactooo
 <br>
-
+<h1 align="center">
 ![cacto_gifs](https://user-images.githubusercontent.com/83614778/162597397-8e8f5086-9a06-4eaa-bd87-83bd702a18e6.gif)
-
+</h1>
 <br>
 <h1 align="center">🌵 Cactos 🌵</h1>
 
@@ -42,24 +42,14 @@ At each attempt, the game will warn which letters are right and which are wrong,
 
 ## 💻 How to run the application:
 
-1 - Get a free API Key at [https://cacto.com](https://cacto.com)
+1 - Get a free API Key at [https://cacto.com](https://calm-yeot-fa8e67.netlify.app/)
 
 2 -  Clone the repo
    ```sh
    git clone https://github.com/karinevitoria/projetoCactooo.git
    ```
 
-3 - Install NPM packages
-   ```sh
-   npm install
-   ```
-
-4 -  Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-## 🏜️ Contributing
+# 🏜️ Contributing
   
 > If you have a suggestion to improve Cactus, 'oxi ' feel free and just fork the repository and create a pull request. <br> 
 You can also simply open an issue with the tag "improvement".<br>
@@ -85,25 +75,26 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## 🌵 Equipe Cacto 🌵
+## 🌵 Equipe Cactos 🌵
 
->Ana Tereza? -  🌵 (www.linkedin.com/in/LINKAQUI)
+>Ana Teresa -  🌵 (https://www.linkedin.com/in/ana-teresa-negri-7685b51b1/)
 
->Felipe Moura - 🌵 (www.linkedin.com/in/LINKAQUI)
+>Felipe Moura - 🌵 (https://github.com/felipeemoura)
 
 >Karen Reis - 🌵 (www.linkedin.com/in/karen-reis-de-menezes-809334211)  a
 
->Karine? - 🌵 (www.linkedin.com/in/LINKAQUI)
+>Karine Alves - 🌵 (https://www.linkedin.com/in/karinevfalves)
 
->Natália ? - 🌵 (www.linkedin.com/in/LINKAQUI)
+>Natália Alves - 🌵 (https://github.com/nataslia)
 
->Rayanne ? - 🌵 (www.linkedin.com/in/LINKAQUI)
+>Rayanne France - 🌵 (https://www.linkedin.com/in/rayanefrance/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## 🤝 Acknowledgments
 
-🌵 We thank everyone who participated in some way in the project and our teacher @heringsummer.
+🌵 We thank everyone who participated in some way in the project and our teacher @henningsummer.
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
