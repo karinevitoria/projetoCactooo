@@ -67,7 +67,7 @@ body{
 
 /* teclado */
  #teclado{
-  margin: 2rem 0;
+  margin: 1rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,6 +112,7 @@ body{
 /* Tela do jogo */
 
 #telaJogo {
+  margin: -2rem 0;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -204,3 +205,80 @@ body{
   
 }
 
+#stats h2{
+  font-family: 'Cactus';
+  font-size: 28px;
+}
+
+#histo b,p {
+  font-family: 'Cactus';
+  font-size: 20px;
+}
+
+#box {
+  max-width: 720px;
+    padding: 1.5em;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0.5em;
+    overflow: auto;
+    z-index: 19000;
+    pointer-events: auto;
+    line-height: 1.5em;
+}
+
+.statistic-container {
+  flex: 1;
+}
+
+.statistic-container .statistic {
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+  font-variant-numeric: proportional-nums;
+}
+
+.statistic-container .label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+}
+
+#histo {
+  width: 85%;
+  margin: 0 auto 1em auto;
+  display: grid;
+  grid-template-rows: repeate(7, 1fr);
+  grid-template-columns: auto 1fr;
+  grid-gap: 0.2em 0.2em;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+#histo span div {
+  min-width: 9%;
+  font-weight: 300;
+  box-sizing: border-box;
+  padding: 0 0.75em;
+  background-color: #4C4347;
+  text-align: right;
+  font-family: 'Cactus';
+  font-size: 20px;
+  color: #FAFAFF;
+}
+
+#statstable {
+  padding-bottom: 10px;
+  display: flex;
+}
+
+#statstable b,p {
+  font-family: 'Cactus';
+  font-size: 25px;
+}
