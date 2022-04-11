@@ -12,8 +12,22 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="shortcut icon" href="./favicon.ico">
+  <link rel="manifest" href="./manifest.json">
 </head>
 
+<script>
+  if ("serviceWorker" in navigator){
+      navigator.serviceWorker
+      .register('/sw.js')
+      .then(serviceWorker => {
+          console.log('Service worker registrado')
+      })
+      .catch(error => {
+          console.log('erro', error)
+      })
+  }
+</script>
 
 <body>
   <div class="container">
