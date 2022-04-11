@@ -83,7 +83,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 >Felipe Moura - 🌵 (https://github.com/felipeemoura)
 
->Karen Reis - 🌵 (www.linkedin.com/in/karen-reis-de-menezes-809334211)  a
+>Karen Reis - 🌵 (www.linkedin.com/in/karen-reis-de-menezes-809334211)  
 
 >Karine Alves - 🌵 (https://www.linkedin.com/in/karinevfalves)
 
