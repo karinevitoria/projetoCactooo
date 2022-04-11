@@ -5,7 +5,7 @@ let guessesRemaining = NUMBER_OF_GUESSES;
 let currentGuess = [];
 let nextLetter = 0;
 let rightGuessString = girias[Math.floor(Math.random() * girias.length)];
-console.log(rightGuessString)
+// console.log(rightGuessString)
 
 function initBoard() {
     let board = document.getElementById("telaJogo");
