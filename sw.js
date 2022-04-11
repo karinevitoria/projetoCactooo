@@ -2,7 +2,7 @@ const cacheName = 'cactos'
 const assetsToCache = [
     './',
     './assets/images/cordel_mobile.png',
-    './assets/fonts/Cactus Regular.ttf',
+    './assets/fonts/Cactus Regular.otf',
     './assets/images/cordel_web.png',
     './css/materialize.css',
     './css/style.css',
