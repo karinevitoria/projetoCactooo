@@ -95,7 +95,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## 🤝 Acknowledgments
 
-🌵 We thank everyone who participated in some way in the project and our teacher @henningsummer.
+🌵 We wanna to say a huge thanks everyone who participated in some way in the project and @henningsummer our professor.
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
