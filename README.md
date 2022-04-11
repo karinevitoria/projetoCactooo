@@ -4,7 +4,7 @@
 ![cacto_gifs](https://user-images.githubusercontent.com/83614778/162597397-8e8f5086-9a06-4eaa-bd87-83bd702a18e6.gif)
 
 <br>
-<h1 align="center">🌵 Cacto 🌵</h1>
+<h1 align="center">🌵 Cactos 🌵</h1>
 
 > 🚧 Status: Concluded ✔️
 
