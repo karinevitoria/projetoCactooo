@@ -96,21 +96,22 @@ function shadeKeyBoard(letter, color) {
     }
 }
 function checkGuess () {
-    let row = document.getElementsByClassName("letter-row")[7 - guessesRemaining]
-    let guessString = ''
-    let rightGuess = Array.from(rightGuessString)
-
+    let row = document.getElementsByClassName("letter-row")[7 - guessesRemaining];
+    let guessString = '';
+    let rightGuess = Array.from(rightGuessString);
+    let result = document.getElementById("result");
     for (const val of currentGuess) {
         guessString += val
     }
 
     if (guessString.length != 6) {
-        toastr.error("É 6 letras, bicho besta!")
+        result.innerHTML = "É 6 letras, bicho besta!";
         return
     }
 
     if (!girias.includes(guessString)) {
-        toastr.error("Isso num é nem do nordeste!")
+        result.innerHTML = "Isso num é nem do nordeste!";
+
         return
     }
 
@@ -148,7 +149,7 @@ function checkGuess () {
     }
 
     if (guessString === rightGuessString) {
-        toastr.success("Acertou, mizeravi!")
+        result.innerHTML="Acertou, mizeravi!";
         guessesRemaining = 0
         return
     } else {
@@ -157,8 +158,8 @@ function checkGuess () {
         nextLetter = 0;
 
         if (guessesRemaining === 0) {
-            toastr.error("Boy, tu é ruim visse")
-            toastr.info(`Oia como era facin: "${rightGuessString}"`)
+            result.innerHTML="Boy, tu é ruim visse";
+            result.innerHTML=`Oia como era facin: "${rightGuessString}"`;
         }
     }
 }
