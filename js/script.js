@@ -5,7 +5,7 @@ let guessesRemaining = NUMBER_OF_GUESSES;
 let currentGuess = [];
 let nextLetter = 0;
 let rightGuessString = girias[Math.floor(Math.random() * girias.length)];
-console.log(rightGuessString)
+// console.log(rightGuessString)
 
 function initBoard() {
     let board = document.getElementById("telaJogo");
@@ -45,7 +45,7 @@ document.addEventListener("keyup", (e) => {
         return
     }
 
-    let found = pressedKey.match(/[a-z]/gi)
+    let found = pressedKey.match(/[a-z]/g)
     if (!found || found.length > 1) {
         return
     } else {
@@ -205,8 +205,7 @@ document.getElementById("teclado").addEventListener("click", (e) => {
         key = "Backspace"
     }    
 
-    document.dispatchEvent(new KeyboardEvent("keyup", {'key': key}))
-    
+    document.dispatchEvent(new KeyboardEvent("keyup", {'key': key}))   
 })
 
 //parte do local storage
