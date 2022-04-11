@@ -13,7 +13,8 @@ function initBoard() {
     for (let i = 0; i < NUMBER_OF_GUESSES; i++) {
         let row = document.createElement("div")
         row.className = "letter-row"
-        
+        row.setAttribute('id', `row${i}`)
+
         for (let j = 0; j < 6; j++) {
             let box = document.createElement("div")
             box.className = "letter-box"
@@ -34,7 +35,7 @@ document.addEventListener("keyup", (e) => {
     }
 
     let pressedKey = String(e.key)
-    if (pressedKey === "Backspace" && nextLetter !== 0) {
+    if (pressedKey === "Backspace" && nextLetter > 0) {
         deleteLetter()
         return
     }
@@ -65,7 +66,6 @@ function insertLetter (pressedKey) {
     currentGuess.push(pressedKey)
     nextLetter += 1
 
-    console.log(currentGuess)
 }
 
 function deleteLetter () {
@@ -95,6 +95,7 @@ function shadeKeyBoard(letter, color) {
         }
     }
 }
+let wins
 function checkGuess () {
     let row = document.getElementsByClassName("letter-row")[7 - guessesRemaining]
     let guessString = ''
@@ -148,7 +149,33 @@ function checkGuess () {
     }
 
     if (guessString === rightGuessString) {
+        setTimeout(function(){location.reload()}, 3000) // recarregar página após 3 segundos quando vencer.
         toastr.success("Acertou, mizeravi!")
+        wins = true;
+        let rowId = row.getAttribute('id')
+        if (rowId == 'row0') {
+        pontosrow0++
+        localStorage.setItem(rowId, pontosrow0)}
+        if (rowId == 'row1') {
+        pontosrow1++
+        localStorage.setItem(rowId, pontosrow1)}
+        if (rowId == 'row2') {
+        pontosrow2++
+        localStorage.setItem(rowId, pontosrow2)}
+        if (rowId == 'row3') {
+        pontosrow3++
+        localStorage.setItem(rowId, pontosrow3)}
+        if (rowId == 'row4') {
+        pontosrow4++
+        localStorage.setItem(rowId, pontosrow4)}
+        if (rowId == 'row5') {
+        pontosrow5++
+        localStorage.setItem(rowId, pontosrow5)}
+        if (rowId == 'row6') {
+        pontosrow6++
+        localStorage.setItem(rowId, pontosrow6)}
+        jogosGanhos ++
+        localStorage.setItem('jogosGanhos', jogosGanhos)
         guessesRemaining = 0
         return
     } else {
@@ -159,6 +186,10 @@ function checkGuess () {
         if (guessesRemaining === 0) {
             toastr.error("Boy, tu é ruim visse")
             toastr.info(`Oia como era facin: "${rightGuessString}"`)
+            wins = false;
+            jogosPerdidos ++
+            localStorage.setItem('jogosPerdidos', jogosPerdidos)
+            setTimeout(function(){location.reload()}, 4000) //recarregar página após 4 segundos quando perder.
         }
     }
 }
@@ -169,12 +200,89 @@ document.getElementById("teclado").addEventListener("click", (e) => {
         return
     }
     let key = target.textContent
-
+    
     if (key === "del") {
         key = "Backspace"
-    } 
+    }    
 
-    document.dispatchEvent(new KeyboardEvent("keyup", {'key': key}))
+    document.dispatchEvent(new KeyboardEvent("keyup", {'key': key}))   
 })
 
-   
+//parte do local storage
+
+//declarando a variavel e fazendo Json Parse
+let localStorageJogosGanhos = JSON.parse(localStorage.getItem('jogosGanhos'))
+let localStorageJogosPerdidos = JSON.parse(localStorage.getItem('jogosPerdidos'))
+let localStoragerow0 = JSON.parse(localStorage.getItem('row0'))
+let localStoragerow1 = JSON.parse(localStorage.getItem('row1'))
+let localStoragerow2 = JSON.parse(localStorage.getItem('row2'))
+let localStoragerow3 = JSON.parse(localStorage.getItem('row3'))
+let localStoragerow4 = JSON.parse(localStorage.getItem('row4'))
+let localStoragerow5 = JSON.parse(localStorage.getItem('row5'))
+let localStoragerow6 = JSON.parse(localStorage.getItem('row6'))
+
+//Colocando a variavel no local storage
+let jogosGanhos = localStorage.getItem('jogosGanhos') !== null ? localStorageJogosGanhos : 0
+let jogosPerdidos = localStorage.getItem('jogosPerdidos') !== null ? localStorageJogosPerdidos : 0
+let pontosrow0 = localStorage.getItem('row0') !== null ? localStoragerow0 : 0
+let pontosrow1 = localStorage.getItem('row1') !== null ? localStoragerow1 : 0
+let pontosrow2 = localStorage.getItem('row2') !== null ? localStoragerow2 : 0
+let pontosrow3 = localStorage.getItem('row3') !== null ? localStoragerow3 : 0
+let pontosrow4 = localStorage.getItem('row4') !== null ? localStoragerow4 : 0
+let pontosrow5 = localStorage.getItem('row5') !== null ? localStoragerow5 : 0
+let pontosrow6 = localStorage.getItem('row6') !== null ? localStoragerow6 : 0
+
+//ESTATÍSTICAS
+function calculatePct() {
+    var numJogos = document.getElementById("numJogos");
+    var winsPct = document.getElementById("winsPct");
+
+    var totalJogos = jogosGanhos + jogosPerdidos;
+    var pct = jogosGanhos/totalJogos;
+
+    numJogos.textContent = totalJogos;
+    winsPct.textContent = (pct*100).toFixed(0) + "%";
+    if(isNaN(pct*100)){
+        winsPct.textContent = 0 + "%"; //Valor inicial do percentual de vitórias. É porque tava aparecendo "NaN%"
+    }
+}
+calculatePct();
+
+
+function tentativas() {
+    var rows = document.getElementsByClassName("stats_histo");
+
+    if (pontosrow0 != 0) {
+        rows[0].style.width = "100%";
+        rows[0].textContent = pontosrow0;
+    }
+    if (pontosrow1 != 0) {
+        rows[1].style.width = "100%";
+        rows[1].textContent = pontosrow1;
+    }
+    if (pontosrow2 != 0) {
+        rows[2].style.width = "100%";
+        rows[2].textContent = pontosrow2;
+    }
+    if (pontosrow3 != 0) {
+        rows[3].style.width = "100%";
+        rows[3].textContent = pontosrow3;
+    }
+    if (pontosrow4 != 0) {
+        rows[4].style.width = "100%";
+        rows[4].textContent = pontosrow4;
+    }
+    if (pontosrow5 != 0) {
+        rows[5].style.width = "100%";
+        rows[5].textContent = pontosrow5;
+    }
+    if (pontosrow6 != 0) {
+        rows[6].style.width = "100%";
+        rows[6].textContent = pontosrow6;
+    }
+    if (jogosPerdidos != 0) {
+        rows[7].style.width = "100%";
+        rows[7].textContent = jogosPerdidos;
+    }
+}
+tentativas();

@@ -16,131 +16,149 @@
 
 
 <body>
-  <div class="container">
+  <div id="reloadAnimation" class="container">
     <div id="content">
-      <div id="barraSuperior" class="row center">      
-        
+
+      <div id="barraSuperior" class="row center">
+
         <!-- BOTÃO MODAL AJUDA -->
-        <button class="modal-trigger" id="ajuda" href="#modal1"><span class="material-icons">help_outline</span></button>
+        <button class="modal-trigger" id="ajuda" href="#modal1"><span
+            class="material-icons">help_outline</span></button>
         <div id="modal1" class="modal">
           <div class="modal-content">
+            <div tabindex="0" id="help">
+              <p tabindex="0" class="help_termo"> <span class="titulo">Como Jogar:</span> <br> Cactos é um jogo temático
+                com palavras típicas do Nordeste brasileiro. Descubra a palavra certa em 7 tentativas.
+                Depois de cada tentativa, as peças mudarão de cor para mostrar quão perto você está da solução. <br> Só
+                não vale ficar arretado se errar, visse?
 
-            
-            <div tabindex="0" id="help"> 
-              <p tabindex="0" class="help_termo"> <span class="titulo">Como Jogar:</span> <br> Cactos é um jogo temático com palavras típicas do Nordeste brasileiro. Descubra a palavra certa em 7 tentativas.
-              Depois de cada tentativa, as peças mudarão de cor para mostrar quão perto você está da solução. <br> Só não vale ficar arretado se errar, visse?
-              
-               </p><div class="example">
-                 <span tabindex="0" role="text" aria-label="letra T correta" class="letter correct">A</span>
-                 
-                 <span tabindex="0" role="text" aria-label="letra U" class="letter">V</span>
-                 <span tabindex="0" role="text" aria-label="letra R" class="letter">U</span>
-                 <span tabindex="0" role="text" aria-label="letra M" class="letter">A</span>
-                 <span tabindex="0" role="text" aria-label="letra A" class="letter">D</span>
-                 <span tabindex="0" role="text" aria-label="letra A" class="letter">O</span>
-                 
-               </div>
-             
-               <p tabindex="0">A letra <span class="letter correct">A</span> faz parte da palavra e está na
-               posição correta.</p>
-               
-               <div class="example">
-                 <span tabindex="0" role="text" aria-label="letra V" class="letter">C</span>
-                 <span tabindex="0" role="text" aria-label="letra I" class="letter">H</span>
-                 <span tabindex="0" role="text" aria-label="letra O em outro local" class="letter place">E</span>
-                 <span tabindex="0" role="text" aria-label="letra L" class="letter">I</span>
-                 <span tabindex="0" role="text" aria-label="letra A" class="letter">R</span>
-                 <span tabindex="0" role="text" aria-label="letra A" class="letter">O</span>
-               </div>
-             
-               <p tabindex="0">A letra <span class="letter place">E</span> faz parte da palavra, mas em outra posição.</p>
-             
-               <div class="example">
-                 <span tabindex="0" role="text" aria-label="letra P" class="letter">C</span>
-                 <span tabindex="0" role="text" aria-label="letra U" class="letter wrong">O</span>
-                 <span tabindex="0" role="text" aria-label="letra L" class="letter">T</span>
-                 <span tabindex="0" role="text" aria-label="letra G errada" class="letter wrong">O</span>
-                 <span tabindex="0" role="text" aria-label="letra A" class="letter">C</span>
-                 <span tabindex="0" role="text" aria-label="letra A" class="letter wrong">O</span>
-               </div>
-             
-               <p tabindex="0">A letra <span class="letter wrong">O</span> não faz parte da palavra.</p>
-                                       
-               <div class="help_termo">
-                 <p tabindex="0" style="font-weight: bold">Enquanto o discionário nordestino permitir todo santo dia uma palavra diferente.</p>
-                 
-               </div>
-             </div>
+              </p>
             </div>
-           </div>
-        
+            <div class="example">
+              <span tabindex="0" role="text" aria-label="letra T correta" class="letter correct">A</span>
+
+              <span tabindex="0" role="text" aria-label="letra U" class="letter">V</span>
+              <span tabindex="0" role="text" aria-label="letra R" class="letter">U</span>
+              <span tabindex="0" role="text" aria-label="letra M" class="letter">A</span>
+              <span tabindex="0" role="text" aria-label="letra A" class="letter">D</span>
+              <span tabindex="0" role="text" aria-label="letra A" class="letter">O</span>
+
+            </div>
+
+            <p tabindex="0">A letra <span class="letter correct">A</span> faz parte da palavra e está na
+              posição correta.</p>
+
+            <div class="example">
+              <span tabindex="0" role="text" aria-label="letra V" class="letter">C</span>
+              <span tabindex="0" role="text" aria-label="letra I" class="letter">H</span>
+              <span tabindex="0" role="text" aria-label="letra O em outro local" class="letter place">E</span>
+              <span tabindex="0" role="text" aria-label="letra L" class="letter">I</span>
+              <span tabindex="0" role="text" aria-label="letra A" class="letter">R</span>
+              <span tabindex="0" role="text" aria-label="letra A" class="letter">O</span>
+            </div>
+
+            <p tabindex="0">A letra <span class="letter place">E</span> faz parte da palavra, mas em outra posição.
+            </p>
+
+            <div class="example">
+              <span tabindex="0" role="text" aria-label="letra P" class="letter">C</span>
+              <span tabindex="0" role="text" aria-label="letra U" class="letter">O</span>
+              <span tabindex="0" role="text" aria-label="letra L" class="letter">T</span>
+              <span tabindex="0" role="text" aria-label="letra G errada" class="letter wrong">O</span>
+              <span tabindex="0" role="text" aria-label="letra A" class="letter">C</span>
+              <span tabindex="0" role="text" aria-label="letra A" class="letter">O</span>
+            </div>
+
+            <p tabindex="0">A letra <span class="letter wrong">O</span> não faz parte da palavra.</p>
+
+            <div class="help_termo">
+              <p tabindex="0" style="font-weight: bold">Uma palavra nova aparece a cada dia.</p>
+
+            </div>
+          </div>
+        </div>
+
+
         <h1>CACTOS</h1>
 
         <!-- BOTÃO MODAL ESTATÍSTICAS -->
         <button id="estatisticas" class="modal-trigger" href="#modalestatistica1"><span
-          class="material-icons">analytics</span></button>
-      <div id="modalestatistica1" class="modal">
-        <div class="modal-content">
+            class="material-icons">analytics</span></button>
+        <div id="modalestatistica1" class="modal">
+          <div class="modal-content">
 
-          <div tabindex="0" id="help">
-            <p tabindex="0" class="help_cactos"> <span class="titulo"></span></p>
-            <div id="box">
-              <div id="stats">
-                <h2 class="titulo">progresso</h2>
-                <div id="statstable">
-                  <div class="statistic-container">
-                    <b class="statistic">0</b>
-                    <p class="label">jogos</p>
+            <div tabindex="0" id="help">
+              <p tabindex="0" class="help_cactos"> <span class="titulo"></span></p>
+              <div id="box">
+                <div id="stats">
+                  <h2 class="titulo">progresso</h2>
+                  <div id="statstable">
+                    <div class="statistic-container">
+                      <b id="numJogos" class="statistic">0</b>
+                      <p class="label">jogos</p>
+                    </div>
+                    <div class="statistic-container">
+                      <b id="winsPct" class="statistic">0%</b>
+                      <p class="label">de vitórias</p>
+                    </div>
+                    <div class="statistic-container">
+                      <b id="winstreak" class="statistic">0</b>
+                      <p class="label">sequência de vitórias</p>
+                    </div>
+                    <div class="statistic-container">
+                      <b id="maxstreak" class="statistic">0</b>
+                      <p class="label">melhor sequência</p>
+                    </div>
                   </div>
-                  <div class="statistic-container">
-                    <b class="statistic">0%</b>
-                    <p class="label">de vitórias</p>
+                  <h2>distribuição de tentativas</h2>
+                  <div id="histo">
+                    <b>1</b>
+                    <span>
+                      <div class="stats_histo" style="width: 0%">0</div>
+                    </span>
+                    <b>2</b>
+                    <span>
+                      <div class="stats_histo" style="width: 0%">0</div>
+                    </span>
+                    <b>3</b>
+                    <span>
+                      <div class="stats_histo" style="width: 0%">0</div>
+                    </span>
+                    <b>4</b>
+                    <span>
+                      <div class="stats_histo" style="width: 0%">0</div>
+                    </span>
+                    <b>5</b>
+                    <span>
+                      <div class="stats_histo" style="width: 0%">0</div>
+                    </span>
+                    <b>6</b> 
+                    <span>
+                      <div class="stats_histo" style="width: 0%">0</div>
+                    </span>
+                    <b>7</b>
+                    <span>
+                      <div class="stats_histo" style="width: 0%">0</div>
+                    </span>
+                    <b>💀</b>
+                    <span>
+                      <div class="stats_histo" style="width: 0%">0</div>
+                    </span>
                   </div>
-                  <div class="statistic-container">
-                    <b class="statistic">0</b>
-                    <p class="label">sequência de vitórias</p>
-                  </div>
-                  <div class="statistic-container">
-                    <b class="statistic">0</b>
-                    <p class="label">melhor sequência</p>
-                  </div>
-                </div>
-                <h2>distribuição de tentativas</h2>
-                <div id="histo">
-                  <b>1</b>
-                  <span>
-                    <div class="stats_histo" style="width: 0%">0</div>
-                  </span>
-                  <b>2</b>
-                  <span>
-                    <div class="stats_histo" style="width: 0%">0</div>
-                  </span>
-                  <b>3</b>
-                  <span>
-                    <div class="stats_histo" style="width: 0%">0</div>
-                  </span>
-                  <b>4</b>
-                  <span>
-                    <div class="stats_histo" style="width: 0%">0</div>
-                  </span>
-                  <b>5</b>
-                  <span>
-                    <div class="stats_histo" style="width: 0%">0</div>
-                  </span>
-                  <b>6</b>
-                  <span>
-                    <div class="stats_histo" style="width: 0%">0</div>
-                  </span>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
+
         <!-- BOTÃO MODAL INFORMAÇÕES -->
-        <button id="informacoes" class="modal-trigger" href="#modalInfo1"><span class="material-icons">info</span></button>
+        <button id="informacoes" class="modal-trigger" href="#modalInfo1"><span
+            class="material-icons">info</span></button>
         <div id="modalInfo1" class="modal">
           <div class="modal-content">
+
 
             <div tabindex="0" id="help"> 
               <p tabindex="0" class="help_cactos"> <span class="titulo">Sobre o Projeto:</span> </p> 
@@ -154,13 +172,15 @@
                <div id="timer"> </div>
              </div>
             </div>
-           </div>  
+           </div> 
 
-
+            </div>
+          </div>
+        </div>
       </div>
 
       <div id="telaJogo"></div>
-
+      
       <div id="teclado">
         <div class="primeiraFileira">
           <button class="btnTeclado">q</button>
@@ -184,10 +204,10 @@
           <button class="btnTeclado">j</button>
           <button class="btnTeclado">k</button>
           <button class="btnTeclado">l</button>
-          <button class="btnTeclado" value="backspace">del</button>
+          <button class="btnTeclado" id="delete">del</button>
         </div>
         <div class="terceiraFileira">
-
+          
           <button class="btnTeclado">z</button>
           <button class="btnTeclado">x</button>
           <button class="btnTeclado">c</button>
@@ -200,20 +220,22 @@
       </div>
     </div>
   </div>
-  <!--  Scripts-->
+</body>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="./js/script.js" type="module"></script>
-  <script src="./js/contador.js" defer></script>
-  <script src="js/materialize.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $('.modal').modal();
-      $('.modalInfo').modal();
-    });
-  </script> 
+<!--  Scripts-->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="./js/script.js" type="module"></script>
+<script src="js/materialize.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('.modal').modal();
+    $('.modalestatistica').modal();
+    $('.modalInfo').modal();
+  });
+</script>
 
 
 </body>
