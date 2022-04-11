@@ -149,6 +149,7 @@ function checkGuess () {
     }
 
     if (guessString === rightGuessString) {
+        setTimeout(function(){location.reload()}, 3000) // recarregar página após 3 segundos quando vencer.
         toastr.success("Acertou, mizeravi!")
         wins = true;
         let rowId = row.getAttribute('id')
@@ -188,6 +189,7 @@ function checkGuess () {
             wins = false;
             jogosPerdidos ++
             localStorage.setItem('jogosPerdidos', jogosPerdidos)
+            setTimeout(function(){location.reload()}, 4000) //recarregar página após 4 segundos quando perder.
         }
     }
 }
@@ -208,7 +210,6 @@ document.getElementById("teclado").addEventListener("click", (e) => {
 })
 
 //parte do local storage
-
 
 //declarando a variavel e fazendo Json Parse
 let localStorageJogosGanhos = JSON.parse(localStorage.getItem('jogosGanhos'))
@@ -232,3 +233,57 @@ let pontosrow4 = localStorage.getItem('row4') !== null ? localStoragerow4 : 0
 let pontosrow5 = localStorage.getItem('row5') !== null ? localStoragerow5 : 0
 let pontosrow6 = localStorage.getItem('row6') !== null ? localStoragerow6 : 0
 
+//ESTATÍSTICAS
+function calculatePct() {
+    var numJogos = document.getElementById("numJogos");
+    var winsPct = document.getElementById("winsPct");
+
+    var totalJogos = jogosGanhos + jogosPerdidos;
+    var pct = jogosGanhos/totalJogos;
+
+    numJogos.textContent = totalJogos;
+    winsPct.textContent = (pct*100).toFixed(0) + "%";
+    if(isNaN(pct*100)){
+        winsPct.textContent = 0 + "%"; //Valor inicial do percentual de vitórias. É porque tava aparecendo "NaN%"
+    }
+}
+calculatePct();
+
+
+function tentativas() {
+    var rows = document.getElementsByClassName("stats_histo");
+
+    if (pontosrow0 != 0) {
+        rows[0].style.width = "100%";
+        rows[0].textContent = pontosrow0;
+    }
+    if (pontosrow1 != 0) {
+        rows[1].style.width = "100%";
+        rows[1].textContent = pontosrow1;
+    }
+    if (pontosrow2 != 0) {
+        rows[2].style.width = "100%";
+        rows[2].textContent = pontosrow2;
+    }
+    if (pontosrow3 != 0) {
+        rows[3].style.width = "100%";
+        rows[3].textContent = pontosrow3;
+    }
+    if (pontosrow4 != 0) {
+        rows[4].style.width = "100%";
+        rows[4].textContent = pontosrow4;
+    }
+    if (pontosrow5 != 0) {
+        rows[5].style.width = "100%";
+        rows[5].textContent = pontosrow5;
+    }
+    if (pontosrow6 != 0) {
+        rows[6].style.width = "100%";
+        rows[6].textContent = pontosrow6;
+    }
+    if (jogosPerdidos != 0) {
+        rows[7].style.width = "100%";
+        rows[7].textContent = jogosPerdidos;
+    }
+}
+tentativas();
