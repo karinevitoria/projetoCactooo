@@ -8,13 +8,13 @@
 <br>
 <h1 align="center">🌵 Cactos 🌵</h1>
 
-> 🚧 Status: Concluded ✔️
+> 🚧 Status: In progress ✔️
 
 ## 📝 Description
 <p align="justify"> 
   
-The project was developed by students of the Front-end course, class 36, of the Senac/PE institution. The Cactus game works in a similar way to the original Wordle, 
-but Cactus was developed with typical words from the Brazilian Northeast region. 
+The project was developed by students of the Front-end course, class 36, of the Senac/PE institution. The Cactos game works in a similar way to the original Wordle, 
+but Cactos was developed with typical words from the Brazilian Northeast region. 
 The user receives daily a word that must be deciphered by the players. <br>
 The game has only hints indicated by the colors of the letters 
 placed in each attempt. The word remains for 24 hours, the player has 7 chances, in which, in each of them, he can risk a 6-letter word.
@@ -95,7 +95,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## 🤝 Acknowledgments
 
-🌵 We wanna to say a huge thanks everyone who participated in some way in the project and @henningsummer our professor.
+🌵 We want to say a huge thanks everyone who participated in some way in the project and @henningsummer our professor.
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
