@@ -44,7 +44,7 @@ At each attempt, the game will warn which letters are right and which are wrong,
 
 ## 💻 How to run the application:
 
-1 - Open  APP  at [https://cacto.com](https://calm-yeot-fa8e67.netlify.app/)
+1 - Open  APP  at [https://cactos.com](https://cact-ooo.netlify.app/)
 
 2 -  Clone the repo
    ```sh
