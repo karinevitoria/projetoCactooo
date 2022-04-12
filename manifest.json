@@ -1,0 +1,18 @@
+{
+    "name": "Cactos",
+    "short-name": "Cactos",
+    "description": "PWA do Cactos",
+    "prefer_related_application": true,
+    "start_url": "./",
+    "icons": [
+        {
+        "src": "./icon.png",
+        "sizes": "1080x1080",
+        "type": "image/png"
+        }
+    ],
+    "theme_color": "#34af23",
+    "background_color": "#ffffff",
+    "display": "fullscreen",
+    "orientation": "portrait"
+}
