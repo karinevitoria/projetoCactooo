@@ -30,15 +30,14 @@
 </script>
 
 <body>
-  <div class="container">
+  <div id="reloadAnimation" class="container">
     <div id="content">
-      <div id="barraSuperior" class="row center">      
+      <div id="barraSuperior" class="row center">
         <!-- BOTÃO MODAL AJUDA -->
-        <button class="modal-trigger" id="ajuda" href="#modal1"><span class="material-icons">help_outline</span></button>
+        <button class="modal-trigger" id="ajuda" href="#modal1"><span
+            class="material-icons">help_outline</span></button>
         <div id="modal1" class="modal">
           <div class="modal-content">
-            
-            
             <div tabindex="0" id="help"> 
               <p tabindex="0" class="help_termo"> <span class="titulo">Como Jogar:</span> <br> Cactos é um jogo temático com palavras típicas do Nordeste brasileiro. Descubra a palavra certa em 7 tentativas.
                 Depois de cada tentativa, as peças mudarão de cor para mostrar quão perto você está da solução. <br> Só não vale ficar arretado se errar, visse?
@@ -153,34 +152,36 @@
                     <div class="stats_histo" style="width: 0%">0</div>
                   </span>
                 </div>
+
               </div>
             </div>
           </div>
         </div>
-      </div>
+        </div>
         <!-- BOTÃO MODAL INFORMAÇÕES -->
-        <button id="informacoes" class="modal-trigger" href="#modalInfo1"><span class="material-icons">info</span></button>
-        <div id="modalInfo1" class="modal">
-          <div class="modal-content">
-
-            <div tabindex="0" id="help"> 
-              <p tabindex="0" class="help_cactos"> <span class="titulo">Sobre o Projeto:</span> </p> 
-               <p style="text-align: left">
-                Cactos é um jogo temático inspirado na verção original Wordle e a então versão brasileira Termo.<br><br>
-                Projeto realizado no curso de Desenvolvimento Frontend do SENAC ministrado pelo professor Henning Summer.<br><br>
-                <b>Colaboradores:</b> Ana Teresa, Felipe Moura, Karen Reis, Karine Vitória, Natália Alves e Rayane France. <br><br>
-                <b>Link repositório:</b> <a href="https://github.com/karinevitoria/projetoCactooo" target="_blank" style="color: rgb(255, 255, 255);"><u>Cactos.</u></a>
-               </p> 
-                   
-               <div id="timer"> </div>
-             </div>
+        <button id="informacoes" class="modal-trigger" href="#modalInfo1"><span
+          class="material-icons">info</span></button>
+          <div id="modalInfo1" class="modal">
+            <div class="modal-content">
+              
+              
+              <div tabindex="0" id="help"> 
+                <p tabindex="0" class="help_cactos"> <span class="titulo">Sobre o Projeto:</span> </p> 
+                <p style="text-align: left">
+                  Cactos é um jogo temático inspirado na versão original Wordle e a então versão brasileira Termo.<br><br>
+                  Projeto realizado no curso de Desenvolvimento Frontend do SENAC ministrado pelo professor Henning Summer.<br><br>
+                  <b>Colaboradores:</b> Ana Teresa, Felipe Moura, Karen Reis, Karine Vitória, Natália Alves e Rayane France. <br><br>
+                  <b>Link repositório:</b> <a href="https://github.com/karinevitoria/projetoCactooo" target="_blank" style="color: rgb(255, 255, 255);"><u>Cactos.</u></a>
+                </p> 
+                
+                 <div id="timer"> </div>
+                </div>
+              </div>
             </div>
-           </div>  
-
-
+        </div>
+        <div id="result"></div>
+        <div id="telaJogo"></div>
       </div>
-      <div id="result"></div>
-      <div id="telaJogo"></div>
 
       <div id="teclado">
         <div class="primeiraFileira">
@@ -205,10 +206,10 @@
           <button class="btnTeclado">j</button>
           <button class="btnTeclado">k</button>
           <button class="btnTeclado">l</button>
-          <button class="btnTeclado" value="backspace">del</button>
+          <button class="btnTeclado" id="delete">del</button>
         </div>
         <div class="terceiraFileira">
-
+          
           <button class="btnTeclado">z</button>
           <button class="btnTeclado">x</button>
           <button class="btnTeclado">c</button>
@@ -221,20 +222,22 @@
       </div>
     </div>
   </div>
-  <!--  Scripts-->
+</body>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="./js/script.js" type="module"></script>
-  <script src="./js/contador.js" defer></script>
-  <script src="js/materialize.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $('.modal').modal();
-      $('.modalInfo').modal();
-    });
-  </script> 
+<!--  Scripts-->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="./js/script.js" type="module"></script>
+<script src="js/materialize.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('.modal').modal();
+    $('.modalestatistica').modal();
+    $('.modalInfo').modal();
+  });
+</script>
 
 
 </body>
