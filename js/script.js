@@ -1,3 +1,4 @@
+
 import { girias } from "./girias.js"
 
 const NUMBER_OF_GUESSES = 7;
@@ -9,7 +10,7 @@ console.log(rightGuessString)
 
 function initBoard() {
     let board = document.getElementById("telaJogo");
-
+    
     for (let i = 0; i < NUMBER_OF_GUESSES; i++) {
         let row = document.createElement("div")
         row.className = "letter-row"
@@ -19,7 +20,7 @@ function initBoard() {
             box.className = "letter-box"
             row.appendChild(box)
         }
-
+        
         board.appendChild(row)
     }
 }
@@ -38,12 +39,12 @@ document.addEventListener("keyup", (e) => {
         deleteLetter()
         return
     }
-
+    
     if (pressedKey === "Enter") {
         checkGuess()
         return
     }
-
+    
     let found = pressedKey.match(/[a-z]/g)
     if (!found || found.length > 1) {
         return
@@ -57,14 +58,14 @@ function insertLetter (pressedKey) {
         return
     }
     pressedKey = pressedKey.toLowerCase()
-
+    
     let row = document.getElementsByClassName("letter-row")[7 - guessesRemaining]
     let box = row.children[nextLetter]
     box.textContent = pressedKey
     box.classList.add("filled-box")
     currentGuess.push(pressedKey)
     nextLetter += 1
-
+    
     console.log(currentGuess)
 }
 
@@ -85,11 +86,11 @@ function shadeKeyBoard(letter, color) {
             if (oldColor === 'green') {
                 return
             } 
-
+            
             if (oldColor === 'yellow' && color !== 'green') {
                 return
             }
-
+            
             elem.style.backgroundColor = color
             break
         }
@@ -103,18 +104,18 @@ function checkGuess () {
     for (const val of currentGuess) {
         guessString += val
     }
-
+    
     if (guessString.length != 6) {
         result.innerHTML = "É 6 letras, bicho besta!";
         return
     }
-
+    
     if (!girias.includes(guessString)) {
         result.innerHTML = "Isso num é nem do nordeste!";
-
+        
         return
     }
-
+    
     
     for (let i = 0; i < 7; i++) {
         let letterColor = ''
@@ -136,10 +137,10 @@ function checkGuess () {
                 // shade box yellow
                 letterColor = '#EEBB4D'
             }
-
+            
             rightGuess[letterPosition] = "#"
         }
-
+        
         let delay = 250 * i
         setTimeout(()=> {
             //shade box
@@ -157,7 +158,7 @@ function checkGuess () {
         guessesRemaining -= 1;
         currentGuess = [];
         nextLetter = 0;
-
+        
         if (guessesRemaining === 0) {
             result.innerHTML="Boy, tu é ruim visse";
             result.innerHTML=`Oia como era facin: "${rightGuessString}"`;
@@ -172,11 +173,11 @@ document.getElementById("teclado").addEventListener("click", (e) => {
         return
     }
     let key = target.textContent
-
+    
     if (key === "del") {
         key = "Backspace"
     } 
-
+    
     document.dispatchEvent(new KeyboardEvent("keyup", {'key': key}))
 })
 
@@ -209,11 +210,10 @@ let pontosrow6 = localStorage.getItem('row6') !== null ? localStoragerow6 : 0
 function calculatePct() {
     var numJogos = document.getElementById("numJogos");
     var winsPct = document.getElementById("winsPct");
-
+    
     var totalJogos = jogosGanhos + jogosPerdidos;
     var pct = jogosGanhos/totalJogos;
 
-    console.log("passei aq")
     numJogos.textContent = totalJogos;
     winsPct.textContent = (pct*100).toFixed(0) + "%";
     if(isNaN(pct*100)){
@@ -225,7 +225,6 @@ calculatePct();
 
 function tentativas() {
     var rows = document.getElementsByClassName("stats_histo");
-    console.log("passei nas tentativas")
     if (pontosrow0 != 0) {
         rows[0].style.width = "100%";
         rows[0].textContent = pontosrow0;
@@ -259,4 +258,8 @@ function tentativas() {
         rows[7].textContent = jogosPerdidos;
     }
 }
+
+
 tentativas();
+
+

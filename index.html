@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
   <title>Cactos</title>
-
+  
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
@@ -13,12 +13,12 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-  <link rel="manifest" href="./manifest.json">
+  <!-- <link rel="manifest" href="./manifest.json"> -->
 </head>
 
-<script>
+<!-- <script>
   if ("serviceWorker" in navigator){
-      navigator.serviceWorker
+    navigator.serviceWorker
       .register('/sw.js')
       .then(serviceWorker => {
           console.log('Service worker registrado')
@@ -27,7 +27,7 @@
           console.log('erro', error)
       })
   }
-</script>
+</script> -->
 
 <body>
   <div id="reloadAnimation" class="container">
@@ -180,7 +180,7 @@
             </div>
         </div>
         <div id="result"></div>
-        <div id="telaJogo"></div>
+        <div id="telaJogo" ></div>
       </div>
 
       <div id="teclado">
@@ -237,6 +237,9 @@
     $('.modalestatistica').modal();
     $('.modalInfo').modal();
   });
+  window.onload = function () { 
+console.log("passei no click")
+$(".modal-trigger#ajuda").click(); }
 </script>
 
 
