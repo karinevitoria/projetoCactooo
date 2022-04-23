@@ -8,19 +8,106 @@ let nextLetter = 0;
 let rightGuessString = girias[Math.floor(Math.random() * girias.length)];
 console.log(rightGuessString)
 
+function shareText() {
+
+    let jogoPreenchido = $(".filled-box");
+    let allFilledBoxesColors = []
+
+    for (let i = 0; i < jogoPreenchido.length; i++) {
+        allFilledBoxesColors.push(jogoPreenchido[i].style.backgroundColor);
+        // a gente vai pegar todos os indices de cada cor aham. e colocar numa array q q a gente faz com a arraa? SPLICE NELAS FOR CADA I QUE O I VAI SER A ARRAY.LENGTH VAMO PEGAR O VALOR DAR UM SPLICE NELA E SUBSITUIR . eh isso gatas
+    }
+    var colorGray = [];
+    allFilledBoxesColors.reduce(function (a, e, i) {
+        if (e == 'rgb(182, 169, 145)')
+            colorGray.push(i);
+        return colorGray;
+    }, [])
+    for (let index = 0; index < colorGray.length; index++) {
+        allFilledBoxesColors.splice(colorGray[index], 1, '⬛');
+    }
+
+
+    var colorYellow = [];
+    allFilledBoxesColors.reduce(function (a, e, i) {
+        if (e == 'rgb(238, 187, 77)')
+            colorYellow.push(i);
+        return colorYellow;
+    }, [])
+    for (let index = 0; index < colorYellow.length; index++) {
+        allFilledBoxesColors.splice(colorYellow[index], 1, '☀');
+    }
+
+    var colorGreen = [];
+    allFilledBoxesColors.reduce(function (a, e, i) {
+        if (e == 'rgb(93, 112, 20)' || e == '')
+            colorGreen.push(i);
+        return colorGreen;
+    }, [])
+    for (let index = 0; index < colorGreen.length; index++) {
+        allFilledBoxesColors.splice(colorGreen[index], 1, '🌵');
+    }
+
+    var coresTexto
+
+    if(allFilledBoxesColors.length == 6){
+        var coresTexto = allFilledBoxesColors.toString().replace(/,/g, '');
+    } else if (allFilledBoxesColors.length == 12){
+        allFilledBoxesColors.splice(6, 0, '%0A');
+        var coresTexto = allFilledBoxesColors.toString().replace(/,/g, '');
+    } else if (allFilledBoxesColors.length == 18){
+        allFilledBoxesColors.splice(6, 0, '%0A');
+        allFilledBoxesColors.splice(13, 0, '%0A');
+        var coresTexto = allFilledBoxesColors.toString().replace(/,/g, '');
+    } else if (allFilledBoxesColors.length == 24){
+        allFilledBoxesColors.splice(6, 0, '%0A');
+        allFilledBoxesColors.splice(13, 0, '%0A');
+        allFilledBoxesColors.splice(20, 0, '%0A');
+        var coresTexto = allFilledBoxesColors.toString().replace(/,/g, '');
+    } else if (allFilledBoxesColors.length == 30){
+        allFilledBoxesColors.splice(6, 0, '%0A');
+        allFilledBoxesColors.splice(13, 0, '%0A');
+        allFilledBoxesColors.splice(20, 0, '%0A');
+        allFilledBoxesColors.splice(27, 0, '%0A');
+        var coresTexto = allFilledBoxesColors.toString().replace(/,/g, '');
+    } else if (allFilledBoxesColors.length == 36){
+        allFilledBoxesColors.splice(6, 0, '%0A');
+        allFilledBoxesColors.splice(13, 0, '%0A');
+        allFilledBoxesColors.splice(20, 0, '%0A');
+        allFilledBoxesColors.splice(27, 0, '%0A');
+        allFilledBoxesColors.splice(34, 0, '%0A');
+        var coresTexto = allFilledBoxesColors.toString().replace(/,/g, '');
+    } else if (allFilledBoxesColors.length == 42){
+        allFilledBoxesColors.splice(6, 0, '%0A');
+        allFilledBoxesColors.splice(13, 0, '%0A');
+        allFilledBoxesColors.splice(20, 0, '%0A');
+        allFilledBoxesColors.splice(27, 0, '%0A');
+        allFilledBoxesColors.splice(34, 0, '%0A');
+        allFilledBoxesColors.splice(41, 0, '%0A');
+        var coresTexto = allFilledBoxesColors.toString().replace(/,/g, '');
+    }
+
+
+    let texto = `<a href="https://twitter.com/intent/tweet?text=Joguei Cactos: %0A${coresTexto}%0Ahttps://cact-ooo.netlify.app/" target="_blank">Compartilhar para o Twitter</a>`;
+
+    $('#btnCompartilhar').html(texto);
+}
+
+
+
 function initBoard() {
     let board = document.getElementById("telaJogo");
-    
+
     for (let i = 0; i < NUMBER_OF_GUESSES; i++) {
         let row = document.createElement("div")
         row.className = "letter-row"
-        
+
         for (let j = 0; j < 6; j++) {
             let box = document.createElement("div")
             box.className = "letter-box"
             row.appendChild(box)
         }
-        
+
         board.appendChild(row)
     }
 }
@@ -39,12 +126,12 @@ document.addEventListener("keyup", (e) => {
         deleteLetter()
         return
     }
-    
+
     if (pressedKey === "Enter") {
         checkGuess()
         return
     }
-    
+
     let found = pressedKey.match(/[a-z]/g)
     if (!found || found.length > 1) {
         return
@@ -53,23 +140,21 @@ document.addEventListener("keyup", (e) => {
     }
 })
 
-function insertLetter (pressedKey) {
+function insertLetter(pressedKey) {
     if (nextLetter === 6) {
         return
     }
     pressedKey = pressedKey.toLowerCase()
-    
+
     let row = document.getElementsByClassName("letter-row")[7 - guessesRemaining]
     let box = row.children[nextLetter]
     box.textContent = pressedKey
     box.classList.add("filled-box")
     currentGuess.push(pressedKey)
     nextLetter += 1
-    
-    console.log(currentGuess)
 }
 
-function deleteLetter () {
+function deleteLetter() {
     let row = document.getElementsByClassName("letter-row")[7 - guessesRemaining]
     let box = row.children[nextLetter - 1]
     box.textContent = ""
@@ -85,18 +170,18 @@ function shadeKeyBoard(letter, color) {
             let oldColor = elem.style.backgroundColor
             if (oldColor === 'green') {
                 return
-            } 
-            
+            }
+
             if (oldColor === 'yellow' && color !== 'green') {
                 return
             }
-            
+
             elem.style.backgroundColor = color
             break
         }
     }
 }
-function checkGuess () {
+function checkGuess() {
     let row = document.getElementsByClassName("letter-row")[7 - guessesRemaining];
     let guessString = '';
     let rightGuess = Array.from(rightGuessString);
@@ -104,24 +189,24 @@ function checkGuess () {
     for (const val of currentGuess) {
         guessString += val
     }
-    
+
     if (guessString.length != 6) {
         result.innerHTML = "É 6 letras, bicho besta!";
         return
     }
-    
+
     if (!girias.includes(guessString)) {
         result.innerHTML = "Isso num é nem do nordeste!";
-        
+
         return
     }
-    
-    
+
+
     for (let i = 0; i < 7; i++) {
         let letterColor = ''
         let box = row.children[i]
         let letter = currentGuess[i]
-        
+
         let letterPosition = rightGuess.indexOf(currentGuess[i])
         // is letter in the correct guess
         if (letterPosition === -1) {
@@ -137,12 +222,12 @@ function checkGuess () {
                 // shade box yellow
                 letterColor = '#EEBB4D'
             }
-            
-            rightGuess[letterPosition] = "#"
+
+            rightGuess[letterPosition] = "#5d7014"
         }
-        
+
         let delay = 250 * i
-        setTimeout(()=> {
+        setTimeout(() => {
             //shade box
             box.style.backgroundColor = letterColor
             shadeKeyBoard(letter, letterColor)
@@ -150,35 +235,37 @@ function checkGuess () {
     }
 
     if (guessString === rightGuessString) {
-        setTimeout(function(){location.reload()}, 3000);
-        result.innerHTML="Acertou, mizeravi!";
+        setTimeout(function () { clickEstatisticas() }, 6000);
+        result.innerHTML = "Acertou, mizeravi!";
         guessesRemaining = 0
+        shareText()
         return
     } else {
         guessesRemaining -= 1;
         currentGuess = [];
         nextLetter = 0;
-        
+
         if (guessesRemaining === 0) {
-            result.innerHTML="Boy, tu é ruim visse";
-            result.innerHTML=`Oia como era facin: "${rightGuessString}"`;
-            setTimeout(function(){location.reload()}, 5000)
+            result.innerHTML = "Boy, tu é ruim visse";
+            result.innerHTML = `Oia como era facin: "${rightGuessString}"`;
+            shareText()
+            setTimeout(function () { clickEstatisticas() }, 0);
         }
     }
 }
 document.getElementById("teclado").addEventListener("click", (e) => {
     const target = e.target
-    
+
     if (!target.classList.contains("btnTeclado")) {
         return
     }
     let key = target.textContent
-    
+
     if (key === "del") {
         key = "Backspace"
-    } 
-    
-    document.dispatchEvent(new KeyboardEvent("keyup", {'key': key}))
+    }
+
+    document.dispatchEvent(new KeyboardEvent("keyup", { 'key': key }))
 })
 
 //parte do local storage
@@ -210,13 +297,13 @@ let pontosrow6 = localStorage.getItem('row6') !== null ? localStoragerow6 : 0
 function calculatePct() {
     var numJogos = document.getElementById("numJogos");
     var winsPct = document.getElementById("winsPct");
-    
+
     var totalJogos = jogosGanhos + jogosPerdidos;
-    var pct = jogosGanhos/totalJogos;
+    var pct = jogosGanhos / totalJogos;
 
     numJogos.textContent = totalJogos;
-    winsPct.textContent = (pct*100).toFixed(0) + "%";
-    if(isNaN(pct*100)){
+    winsPct.textContent = (pct * 100).toFixed(0) + "%";
+    if (isNaN(pct * 100)) {
         winsPct.textContent = 0 + "%"; //Valor inicial do percentual de vitórias. É porque tava aparecendo "NaN%"
     }
 }
@@ -257,8 +344,12 @@ function tentativas() {
         rows[7].style.width = "100%";
         rows[7].textContent = jogosPerdidos;
     }
-}
+};
 
+
+function clickEstatisticas() {
+    $("#estatisticas").click();
+}
 
 tentativas();
 

@@ -41,6 +41,15 @@
   margin: 0px 20px;
   font-family: 'Cactus';
 }
+#btnCompartilhar a{
+  text-decoration: none;
+  color: white;
+}
+#btnCompartilhar{
+  border-radius: 6px !important;
+  font-family: 'Cactus';
+  font-size: 25px;
+}
 
 /* fundo bege e centralizar o conteudo */
 html { 

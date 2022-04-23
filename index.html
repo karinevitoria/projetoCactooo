@@ -8,9 +8,8 @@
   
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
   <!-- <link rel="manifest" href="./manifest.json"> -->
@@ -156,6 +155,9 @@
               </div>
             </div>
           </div>
+
+        <button id="btnCompartilhar">Compartilhar para o Twitter</button>
+
         </div>
         </div>
         <!-- BOTÃO MODAL INFORMAÇÕES -->
@@ -229,7 +231,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="./js/script.js" type="module"></script>
-<script src="js/materialize.js"></script>
+<script src="js/materialize.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script>
   $(document).ready(function () {
@@ -238,7 +240,6 @@
     $('.modalInfo').modal();
   });
   window.onload = function () { 
-console.log("passei no click")
 $(".modal-trigger#ajuda").click(); }
 </script>
 
