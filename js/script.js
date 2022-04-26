@@ -8,6 +8,8 @@ let nextLetter = 0;
 let rightGuessString = girias[Math.floor(Math.random() * girias.length)];
 console.log(rightGuessString)
 
+
+//função para compartilhar o texto no botão
 function shareText() {
 
     let jogoPreenchido = $(".filled-box");
@@ -16,7 +18,7 @@ function shareText() {
     for (let i = 0; i < jogoPreenchido.length; i++) {
         allFilledBoxesColors.push(jogoPreenchido[i].style.backgroundColor);
         // a gente vai pegar todos os indices de cada cor aham. e colocar numa array q q a gente faz com a arraa? SPLICE NELAS FOR CADA I QUE O I VAI SER A ARRAY.LENGTH VAMO PEGAR O VALOR DAR UM SPLICE NELA E SUBSITUIR . eh isso gatas
-    }
+    }3
     var colorGray = [];
     allFilledBoxesColors.reduce(function (a, e, i) {
         if (e == 'rgb(182, 169, 145)')
@@ -102,6 +104,8 @@ function initBoard() {
         let row = document.createElement("div")
         row.className = "letter-row"
 
+        row.setAttribute('id', `row${i}`)
+
         for (let j = 0; j < 6; j++) {
             let box = document.createElement("div")
             box.className = "letter-box"
@@ -114,7 +118,7 @@ function initBoard() {
 
 initBoard()
 
-
+//função para saber se alguma letra está sendo clicada (arrow function)
 document.addEventListener("keyup", (e) => {
 
     if (guessesRemaining === 0) {
@@ -181,6 +185,7 @@ function shadeKeyBoard(letter, color) {
         }
     }
 }
+let wins
 function checkGuess() {
     let row = document.getElementsByClassName("letter-row")[7 - guessesRemaining];
     let guessString = '';
@@ -235,10 +240,38 @@ function checkGuess() {
     }
 
     if (guessString === rightGuessString) {
-        setTimeout(function () { clickEstatisticas() }, 6000);
+        setTimeout(function () { clickEstatisticas() }, 3000);
         result.innerHTML = "Acertou, mizeravi!";
         guessesRemaining = 0
-        shareText()
+        wins = true;
+        let rowId = row.getAttribute('id')
+        if (rowId == 'row0') {
+            pontosrow0++
+            localStorage.setItem(rowId, pontosrow0)
+            console.log('to passando no if')}
+        if (rowId == 'row1') {
+            pontosrow1++
+            localStorage.setItem(rowId, pontosrow1)}
+        if (rowId == 'row2') {
+            pontosrow2++
+            localStorage.setItem(rowId, pontosrow2)}
+        if (rowId == 'row3') {
+            pontosrow3++
+            localStorage.setItem(rowId, pontosrow3)}
+        if (rowId == 'row4') {
+            pontosrow4++
+        localStorage.setItem(rowId, pontosrow4)}
+        if (rowId == 'row5') {
+            pontosrow5++
+            localStorage.setItem(rowId, pontosrow5)}
+        if (rowId == 'row6') {
+            pontosrow6++
+            localStorage.setItem(rowId, pontosrow6)}
+        jogosGanhos ++
+        localStorage.setItem('jogosGanhos', jogosGanhos)
+        calculatePct();
+        shareText();
+        tentativas();
         return
     } else {
         guessesRemaining -= 1;
@@ -248,8 +281,14 @@ function checkGuess() {
         if (guessesRemaining === 0) {
             result.innerHTML = "Boy, tu é ruim visse";
             result.innerHTML = `Oia como era facin: "${rightGuessString}"`;
-            shareText()
-            setTimeout(function () { clickEstatisticas() }, 0);
+            setTimeout(function () { clickEstatisticas() }, 1000);
+            wins = false;
+            jogosPerdidos ++
+            localStorage.setItem('jogosPerdidos', jogosPerdidos)
+            calculatePct();
+            shareText();
+            tentativas();
+            return
         }
     }
 }
@@ -281,7 +320,8 @@ let localStoragerow4 = JSON.parse(localStorage.getItem('row4'))
 let localStoragerow5 = JSON.parse(localStorage.getItem('row5'))
 let localStoragerow6 = JSON.parse(localStorage.getItem('row6'))
 
-//Colocando a variavel no local storage
+//Pegando a variavel no local storage
+
 let jogosGanhos = localStorage.getItem('jogosGanhos') !== null ? localStorageJogosGanhos : 0
 let jogosPerdidos = localStorage.getItem('jogosPerdidos') !== null ? localStorageJogosPerdidos : 0
 let pontosrow0 = localStorage.getItem('row0') !== null ? localStoragerow0 : 0
@@ -291,6 +331,7 @@ let pontosrow3 = localStorage.getItem('row3') !== null ? localStoragerow3 : 0
 let pontosrow4 = localStorage.getItem('row4') !== null ? localStoragerow4 : 0
 let pontosrow5 = localStorage.getItem('row5') !== null ? localStoragerow5 : 0
 let pontosrow6 = localStorage.getItem('row6') !== null ? localStoragerow6 : 0
+
 
 
 //ESTATÍSTICAS
@@ -315,6 +356,7 @@ function tentativas() {
     if (pontosrow0 != 0) {
         rows[0].style.width = "100%";
         rows[0].textContent = pontosrow0;
+        console.log('pelo menos to passando aq.....')
     }
     if (pontosrow1 != 0) {
         rows[1].style.width = "100%";
